@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+
+projects/**/.DS_Store
+projects/**/dist
+
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb

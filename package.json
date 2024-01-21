@@ -1,0 +1,39 @@
+{
+  "name": "state-management",
+  "version": "1.0.0",
+  "description": "State management courses for react, including TanStack Query, Redux Toolkit y Zustand",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "sui-mono commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chicho69-cesar/state-management-react.git"
+  },
+  "keywords": [
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "Tailwind",
+    "TanStack",
+    "Query",
+    "Redux",
+    "Toolkit",
+    "Zustand",
+    "State"
+  ],
+  "author": "Cesar Villalobos Olmos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chicho69-cesar/state-management-react/issues"
+  },
+  "homepage": "https://github.com/chicho69-cesar/state-management-react#readme",
+  "dependencies": {
+    "@s-ui/mono": "2.44.0"
+  }
+}
