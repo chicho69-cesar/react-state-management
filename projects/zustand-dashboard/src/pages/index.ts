@@ -1,0 +1,6 @@
+export { default as BearPage } from './01-basic/BearPage'
+export { default as PersonPage } from './01-basic/PersonPage'
+export { default as JiraPage } from './02-objects/JiraPage'
+export { default as WeddingInvitationPage } from './03-slices/WeddingInvitationPage'
+export { default as LoginPage } from './auth/LoginPage'
+export { default as DashboardPage } from './dashboard/DashboardPage'
