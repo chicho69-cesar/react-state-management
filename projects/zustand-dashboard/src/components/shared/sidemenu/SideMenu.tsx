@@ -1,9 +1,11 @@
 import './SideMenu.css'
+
 import type { IconType } from 'react-icons'
 import { IoSpeedometerOutline, IoPawOutline, IoLogOutOutline, IoHeartOutline, IoListOutline, IoAccessibilityOutline } from 'react-icons/io5'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 
 import SideMenuItem from './SideMenuItem'
+import { useAuthStore } from '../../../stores'
 
 interface MenuItem {
   title: string
@@ -21,6 +23,9 @@ const menuItems: MenuItem[] = [
 ]
 
 export default function SideMenu() {
+  const logoutUser = useAuthStore((state) => state.logoutUser)
+  const userName = useAuthStore((state) => state.user?.fullName || 'No user')
+
   return (
     <div id='menu' className='bg-gray-900 min-h-screen z-10 text-slate-300 w-80 left-0 overflow-y-scroll'>
       <div id='logo' className='mt-4 mb-2 px-6'>
@@ -46,7 +51,7 @@ export default function SideMenu() {
           </span>
 
           <span className='text-sm md:text-base font-bold'>
-            Edward Tompson
+            {userName}
           </span>
         </a>
       </div>
@@ -58,7 +63,7 @@ export default function SideMenu() {
         ))}
 
         {/* Logout */}
-        <NavLink to={'/auth/login'} className='mt-6'>
+        <a onClick={logoutUser} className='mt-6'>
           <div>
             <IoLogOutOutline />
           </div>
@@ -67,7 +72,7 @@ export default function SideMenu() {
             <span className='text-lg text-slate-300 font-bold leading-5'>Logout</span>
             <span className='text-sm text-slate-500 hidden md:block'>Cerrar sesión</span>
           </div>
-        </NavLink>
+        </a>
       </nav>
     </div>
   )
